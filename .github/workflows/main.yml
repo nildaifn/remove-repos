@@ -1,0 +1,16 @@
+
+name: Deploy
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Run API
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build API
+        run: |
+          chmod u+x * && sudo ./remove-github-repos.sh
