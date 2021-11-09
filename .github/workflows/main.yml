@@ -13,4 +13,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build API
         run: |
-          chmod u+x * && sudo ./remove-github-repos.sh
+          chmod u+x *
+          ./remove-github-repos.sh
